@@ -20,7 +20,6 @@ format_fcircle="⓿➊➋➌➍➎➏➐➑➒"
 format_fullstop="🄀⒈⒉⒊⒋⒌⒍⒎⒏⒐"
 format_monospace="𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿"
 format_lines="𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡"
-format_large_circle="0⃝1⃝2⃝3⃝4⃝5⃝6⃝7⃝8⃝9⃝"
 
 ID=$1
 FORMAT=${2:-none}
