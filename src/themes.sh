@@ -22,16 +22,16 @@ case $SELECTED_THEME in
     ["bblack"]="#06080a"
     ["bblue"]="#7199ee"
     ["bcyan"]="#38a89d"
-    ["bgreen"]="#95c561"
+    ["bgreen"]="#98c379"
     ["bmagenta"]="#a485dd"
-    ["bred"]="#ee6d85"
+    ["bred"]="#fe6d85"
     ["bwhite"]="#a0a8cd"
     ["byellow"]="#d7a65f"
 
-    ["ghgreen"]="#95c561"
+    ["ghgreen"]="#587738"
     ["ghmagenta"]="#a485dd"
-    ["ghred"]="#ee6d85"
-    ["ghyellow"]="#d7a65f"
+    ["ghred"]="#773440"
+    ["ghyellow"]="#f6955b"
   )
   ;;
 esac
