@@ -28,6 +28,7 @@ case $SELECTED_THEME in
     ["bwhite"]="#a0a8cd"
     ["byellow"]="#d7a65f"
 
+    ["ghbackground"]="#30363d"
     ["ghgreen"]="#587738"
     ["ghmagenta"]="#a485dd"
     ["ghred"]="#773440"

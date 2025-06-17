@@ -10,7 +10,7 @@ source "$CURRENT_DIR/../lib/coreutils-compat.sh"
 source "$CURRENT_DIR/themes.sh"
 
 cd "$1" || exit 1
-RESET="#[fg=${THEME[foreground]},bg=${THEME[background]},nobold,noitalics,nounderscore,nodim]"
+RESET="#[fg=${THEME[foreground]},bg=${THEME[ghbackground]},nobold,noitalics,nounderscore,nodim]"
 BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 STATUS=$(git status --porcelain 2>/dev/null | grep -cE "^(M| M)")
 
@@ -38,19 +38,19 @@ fi
 UNTRACKED_COUNT="$(git ls-files --other --directory --exclude-standard | wc -l | bc)"
 
 if [[ $CHANGED_COUNT -gt 0 ]]; then
-  STATUS_CHANGED="${RESET}#[fg=${THEME[yellow]},bg=${THEME[background]},bold]${CHANGED_COUNT} "
+  STATUS_CHANGED="${RESET}#[fg=${THEME[yellow]},bg=${THEME[ghbackground]},bold]${CHANGED_COUNT} "
 fi
 
 if [[ $INSERTIONS_COUNT -gt 0 ]]; then
-  STATUS_INSERTIONS="${RESET}#[fg=${THEME[green]},bg=${THEME[background]},bold]${INSERTIONS_COUNT} "
+  STATUS_INSERTIONS="${RESET}#[fg=${THEME[green]},bg=${THEME[ghbackground]},bold]${INSERTIONS_COUNT} "
 fi
 
 if [[ $DELETIONS_COUNT -gt 0 ]]; then
-  STATUS_DELETIONS="${RESET}#[fg=${THEME[red]},bg=${THEME[background]},bold]${DELETIONS_COUNT} "
+  STATUS_DELETIONS="${RESET}#[fg=${THEME[red]},bg=${THEME[ghbackground]},bold]${DELETIONS_COUNT} "
 fi
 
 if [[ $UNTRACKED_COUNT -gt 0 ]]; then
-  STATUS_UNTRACKED="${RESET}#[fg=${THEME[black]},bg=${THEME[background]},bold]${UNTRACKED_COUNT} "
+  STATUS_UNTRACKED="${RESET}#[fg=${THEME[ghbackground]},bg=${THEME[black]},bold]${UNTRACKED_COUNT} "
 fi
 
 # Determine repository sync status
@@ -78,16 +78,16 @@ fi
 # Set the status indicator based on the sync mode
 case "$SYNC_MODE" in
   1)
-    REMOTE_STATUS="$RESET#[bg=${THEME[background]},fg=${THEME[bred]},bold]󱓎"
+    REMOTE_STATUS="$RESET#[bg=${THEME[ghbackground]},fg=${THEME[bred]},bold] 󱓎"
     ;;
   2)
-    REMOTE_STATUS="$RESET#[bg=${THEME[background]},fg=${THEME[red]},bold]󰛃"
+    REMOTE_STATUS="$RESET#[bg=${THEME[ghbackground]},fg=${THEME[red]},bold] 󰛃"
     ;;
   3)
-    REMOTE_STATUS="$RESET#[bg=${THEME[background]},fg=${THEME[magenta]},bold]󰛀"
+    REMOTE_STATUS="$RESET#[bg=${THEME[ghbackground]},fg=${THEME[magenta]},bold] 󰛀"
     ;;
   *)
-    REMOTE_STATUS="$RESET#[bg=${THEME[background]},fg=${THEME[green]},bold]"
+    REMOTE_STATUS="$RESET#[bg=${THEME[ghbackground]},fg=${THEME[green]},bold] "
     ;;
 esac
 
