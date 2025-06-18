@@ -11,22 +11,28 @@ case $SELECTED_THEME in
     ["foreground"]="#a9b1d6"
 
     ["black"]="#06080a"
-    ["blue"]="#7199ee"
-    ["cyan"]="#38a89d"
-    ["green"]="#95c561"
-    ["magenta"]="#a485dd"
-    ["red"]="#ee6d85"
-    ["white"]="#a0a8cd"
-    ["yellow"]="#d7a65f"
+    ["bblack"]="#212234"
 
-    ["bblack"]="#06080a"
-    ["bblue"]="#7199ee"
-    ["bcyan"]="#38a89d"
-    ["bgreen"]="#98c379"
-    ["bmagenta"]="#a485dd"
-    ["bred"]="#fe6d85"
-    ["bwhite"]="#a0a8cd"
+    ["red"]="#ff5458"
+    ["bred"]="#ee6d85"
+
+    ["green"]="#62d196"
+    ["bgreen"]="#95c561"
+
     ["byellow"]="#d7a65f"
+    ["yellow"]="#ffe9aa"
+
+    ["blue"]="#7199ee"
+    ["bblue"]="#65b2ff"
+
+    ["magenta"]="#906cff"
+    ["bmagenta"]="#a485dd"
+
+    ["cyan"]="#38a89d"
+    ["bcyan"]="#62d196"
+
+    ["bwhite"]="#565575"
+    ["white"]="#a0a8cd"
 
     ["ghbackground"]="#30363d"
     ["ghgreen"]="#587738"
