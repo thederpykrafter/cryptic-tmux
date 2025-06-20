@@ -4,86 +4,86 @@ SELECTED_THEME="$(tmux show-option -gv @cryptic-tmux_theme)"
 TRANSPARENT_THEME="$(tmux show-option -gv @cryptic-tmux_transparent)"
 
 case $SELECTED_THEME in
-  *)
-    # Default to cryptic theme
-    declare -A THEME=(
-      ["background"]="#1A1B26"
-      ["foreground"]="#a9b1d6"
+	pywal)
+		source ~/.cache/wal/colors.sh
+		# Default to cryptic theme
+		declare -A THEME=(
+			["background"]=$background
+			["foreground"]=$foreground
 
-      ["black"]="#06080a"
-      ["bblack"]="#212234"
+			["black"]=$color0
+			["bblack"]=$color8
 
-      ["red"]="#ff5458"
-      ["bred"]="#ee6d85"
+			["red"]=$color1
+			["bred"]=$color9
 
-      ["green"]="#62d196"
-      ["bgreen"]="#95c561"
+			["green"]=$color2
+			["bgreen"]=$color10
 
-      ["byellow"]="#d7a65f"
-      ["yellow"]="#ffe9aa"
+			["yellow"]=$color3
+			["breakyellow"]=$color11
 
-      ["blue"]="#7199ee"
-      ["bblue"]="#65b2ff"
+			["blue"]=$color4
+			["bblue"]=$color12
 
-      ["magenta"]="#906cff"
-      ["bmagenta"]="#a485dd"
+			["magenta"]=$color5
+			["bmagenta"]=$color13
 
-      ["cyan"]="#38a89d"
-      ["bcyan"]="#62d196"
+			["cyan"]=$color6
+			["bcyan"]=$color14
 
-      ["bwhite"]="#565575"
-      ["white"]="#a0a8cd"
+			["white"]=$color7
+			["bwhite"]=$color15
 
-      ["ghbackground"]="#30363d"
-      ["ghgreen"]="#587738"
-      ["ghmagenta"]="#a485dd"
-      ["ghred"]="#773440"
-      ["ghyellow"]="#f6955b"
-    )
-      ;;
-    pywal)
-      source ~/.cache/wal/colors.sh
-      # Default to cryptic theme
-      declare -A THEME=(
-        ["background"]=$background
-        ["foreground"]=$foreground
+			["ghbackground"]="#30363d"
+			["ghgreen"]="#587738"
+			["ghmagenta"]="#a485dd"
+			["ghred"]="#773440"
+			["ghyellow"]="#f6955b"
+		)
+		;;
+	*)
+		# Default to cryptic theme
+		declare -A THEME=(
+			["background"]="#1A1B26"
+			["foreground"]="#a9b1d6"
 
-        ["black"]=$color0
-        ["bblack"]=$color8
+			["black"]="#06080a"
+			["bblack"]="#212234"
 
-        ["red"]=$color1
-        ["bred"]=$color9
+			["red"]="#ff5458"
+			["bred"]="#ee6d85"
 
-        ["green"]=$color2
-        ["bgreen"]=$color10
+			["green"]="#62d196"
+			["bgreen"]="#95c561"
 
-        ["yellow"]=$color3
-        ["breakyellow"]=$color11
+			["byellow"]="#d7a65f"
+			["yellow"]="#ffe9aa"
 
-        ["blue"]=$color4
-        ["bblue"]=$color12
+			["blue"]="#7199ee"
+			["bblue"]="#65b2ff"
 
-        ["magenta"]=$color5
-        ["bmagenta"]=$color13
+			["magenta"]="#906cff"
+			["bmagenta"]="#a485dd"
 
-        ["cyan"]=$color6
-        ["bcyan"]=$color14
+			["cyan"]="#38a89d"
+			["bcyan"]="#62d196"
 
-        ["white"]=$color7
-        ["bwhite"]=$color15
+			["bwhite"]="#565575"
+			["white"]="#a0a8cd"
 
-        ["ghbackground"]="#30363d"
-        ["ghgreen"]="#587738"
-        ["ghmagenta"]="#a485dd"
-        ["ghred"]="#773440"
-        ["ghyellow"]="#f6955b"
-      )
-        ;;
-    esac
+			["ghbackground"]="#30363d"
+			["ghgreen"]="#587738"
+			["ghmagenta"]="#a485dd"
+			["ghred"]="#773440"
+			["ghyellow"]="#f6955b"
+		)
+		;;
+esac
 
-    # Override background with "default" if transparent theme is enabled
-    if [ "${TRANSPARENT_THEME}" == 1 ]; then
-      THEME["background"]="default"
-    fi
+# Override background with "default" if transparent theme is enabled
+if [ "${TRANSPARENT_THEME}" == 1 ]; then
+	THEME["background"]="default"
+fi
 
-    RESET="#[fg=${THEME[foreground]},bg=${THEME[background]},nobold,noitalics,nounderscore,nodim]"
+RESET="#[fg=${THEME[foreground]},bg=${THEME[background]},nobold,noitalics,nounderscore,nodim]"
