@@ -1,9 +1,9 @@
-# Tokyo Night Tmux
+# Cryptic Tmux
 
-![example workflow](https://github.com/janoamaral/tokyo-night-tmux/actions/workflows/pre-commit.yml/badge.svg?branch=master)
+![example workflow](https://github.com/thederpykrafter/cryptic-tmux/actions/workflows/pre-commit.yml/badge.svg?branch=master)
 
 A clean, dark Tmux theme that celebrates the lights of Downtown [Tokyo at night.](https://www.google.com/search?q=tokyo+night&newwindow=1&sxsrf=ACYBGNRiOGCstG_Xohb8CgG5UGwBRpMIQg:1571032079139&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiayIfIhpvlAhUGmuAKHbfRDaIQ_AUIEigB&biw=1280&bih=666&dpr=2)
-The perfect companion for [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim)
+The perfect companion for [tokyodark.vim](https://github.com/tiagovla/tokyodark.nvim)
 Adapted from the original, [Visual Studio Code theme](https://github.com/enkia/tokyo-night-vscode-theme).
 The old version (deprecated) is still available in the `legacy` branch.
 
@@ -64,7 +64,7 @@ Check documentation for installing on other operating systems.
 In your `tmux.conf`:
 
 ```bash
-set -g @plugin "janoamaral/tokyo-night-tmux"
+set -g @plugin "thederpykrafter/cryptic-tmux"
 ```
 
 ## Configuration
@@ -74,8 +74,8 @@ set -g @plugin "janoamaral/tokyo-night-tmux"
 Use following option to change theme preference:
 
 ```bash
-set -g @tokyo-night-tmux_theme storm    # storm | day | default to 'night'
-set -g @tokyo-night-tmux_transparent 1  # 1 or 0
+set -g @cryptic-tmux_theme cryptic    # cryptic | pywal # default to 'cryptic'
+set -g @cryptic-tmux_transparent 1  # 1 or 0
 ```
 
 ### Number styles
@@ -83,28 +83,28 @@ set -g @tokyo-night-tmux_transparent 1  # 1 or 0
 Run these commands in your terminal:
 
 ```bash
-tmux set @tokyo-night-tmux_window_id_style digital
-tmux set @tokyo-night-tmux_pane_id_style hsquare
-tmux set @tokyo-night-tmux_zoom_id_style dsquare
+tmux set @cryptic-tmux_window_id_style digital
+tmux set @cryptic-tmux_pane_id_style hsquare
+tmux set @cryptic-tmux_zoom_id_style dsquare
 ```
 
 Alternatively, add these lines to your  `.tmux.conf`:
 
 ```bash
-set -g @tokyo-night-tmux_window_id_style digital
-set -g @tokyo-night-tmux_pane_id_style hsquare
-set -g @tokyo-night-tmux_zoom_id_style dsquare
+set -g @cryptic-tmux_window_id_style digital
+set -g @cryptic-tmux_pane_id_style hsquare
+set -g @cryptic-tmux_zoom_id_style dsquare
 ```
 
 ### Window styles
 
 ```bash
 # Icon styles
-set -g @tokyo-night-tmux_terminal_icon 
-set -g @tokyo-night-tmux_active_terminal_icon 
+set -g @cryptic-tmux_terminal_icon 
+set -g @cryptic-tmux_active_terminal_icon 
 
 # No extra spaces between icons
-set -g @tokyo-night-tmux_window_tidy_icons 0
+set -g @cryptic-tmux_window_tidy_icons 0
 ```
 
 ### Widgets
@@ -116,9 +116,9 @@ For widgets add following lines in you `.tmux.conf`
 This widget is enabled by default. To disable it:
 
 ```bash
-set -g @tokyo-night-tmux_show_datetime 0
-set -g @tokyo-night-tmux_date_format MYD
-set -g @tokyo-night-tmux_time_format 12H
+set -g @cryptic-tmux_show_datetime 0
+set -g @cryptic-tmux_date_format MYD
+set -g @cryptic-tmux_time_format 12H
 ```
 
 ##### Available Options
@@ -133,32 +133,32 @@ set -g @tokyo-night-tmux_time_format 12H
 #### Now Playing widget
 
 ```bash
-set -g @tokyo-night-tmux_show_music 1
+set -g @cryptic-tmux_show_music 1
 ```
 
 #### Netspeed widget
 ![Snap netspeed](snaps/netspeed.png)
 
 ```bash
-set -g @tokyo-night-tmux_show_netspeed 1
-set -g @tokyo-night-tmux_netspeed_iface "wlan0" # Detected via default route
-set -g @tokyo-night-tmux_netspeed_showip 1      # Display IPv4 address (default 0)
-set -g @tokyo-night-tmux_netspeed_refresh 1     # Update interval in seconds (default 1)
+set -g @cryptic-tmux_show_netspeed 1
+set -g @cryptic-tmux_netspeed_iface "wlan0" # Detected via default route
+set -g @cryptic-tmux_netspeed_showip 1      # Display IPv4 address (default 0)
+set -g @cryptic-tmux_netspeed_refresh 1     # Update interval in seconds (default 1)
 ```
 
 #### Path Widget
 
 ```bash
-set -g @tokyo-night-tmux_show_path 1
-set -g @tokyo-night-tmux_path_format relative # 'relative' or 'full'
+set -g @cryptic-tmux_show_path 1
+set -g @cryptic-tmux_path_format relative # 'relative' or 'full'
 ```
 
 #### Battery Widget
 
 ```bash
-set -g @tokyo-night-tmux_show_battery_widget 1
-set -g @tokyo-night-tmux_battery_name "BAT1"  # some linux distro have 'BAT0'
-set -g @tokyo-night-tmux_battery_low_threshold 21 # default
+set -g @cryptic-tmux_show_battery_widget 1
+set -g @cryptic-tmux_battery_name "BAT1"  # some linux distro have 'BAT0'
+set -g @cryptic-tmux_battery_low_threshold 21 # default
 ```
 
 Set variable value `0` to disable the widget. Remember to restart `tmux` after
@@ -167,14 +167,14 @@ changing values.
 #### Hostname Widget
 
 ```bash
-set -g @tokyo-night-tmux_show_hostname 1
+set -g @cryptic-tmux_show_hostname 1
 ```
 
 ## Styles
 
 - `hide`: hide number
 - `none`: no style, default font
-- `digital`: 7 segment number (🯰...🯹) (needs [Unicode support](https://github.com/janoamaral/tokyo-night-tmux/issues/36#issuecomment-1907072080))
+- `digital`: 7 segment number (🯰...🯹) (needs [Unicode support](https://github.com/thederpykrafter/cryptic-tmux/issues/36#issuecomment-1907072080))
 - `roman`: roman numbers (󱂈...󱂐) (needs nerdfont)
 - `fsquare`: filled square (󰎡...󰎼) (needs nerdfont)
 - `hsquare`: hollow square (󰎣...󰎾) (needs nerdfont)
@@ -182,7 +182,7 @@ set -g @tokyo-night-tmux_show_hostname 1
 - `super`: superscript symbol (⁰...⁹)
 - `sub`: subscript symbols (₀...₉)
 
-### New tokyonight Highlights ⚡
+### New cryptic Highlights ⚡
 
 Everything works out the box now. No need to modify anything and colors are hardcoded,
 so it's independent of terminal theme.
@@ -210,7 +210,7 @@ so it's independent of terminal theme.
 
 ### Demo
 
-https://github.com/janoamaral/tokyo-night-tmux/assets/10008708/59ecd814-bc2b-47f2-82b1-ffdbfbc54fbf
+https://github.com/thederpykrafter/cryptic-tmux/assets/10008708/59ecd814-bc2b-47f2-82b1-ffdbfbc54fbf
 
 ### Snapshots
 
