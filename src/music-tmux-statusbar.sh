@@ -5,7 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 . "${ROOT_DIR}/lib/coreutils-compat.sh"
 
 # Check the global value
-SHOW_MUSIC=$(tmux show-option -gv @tokyodark-tmux_show_music)
+SHOW_MUSIC=$(tmux show-option -gv @cryptic-tmux_show_music)
 
 if [ "$SHOW_MUSIC" != "1" ]; then
   exit 0
@@ -74,7 +74,7 @@ elif command -v nowplaying-cli >/dev/null; then
     POSITION=$(printf "%.0f" "${NPCLI_VALUES[elapsedTime]}")
 
     # fix for the bug in nowplaying-cli.
-    # See https://github.com/janoamaral/tokyodark-tmux/issues/107#issuecomment-2576211115
+    # See https://github.com/janoamaral/cryptic-tmux/issues/107#issuecomment-2576211115
     if [[ $OSTYPE == "darwin"* ]]; then
       if [ $STATUS == "playing" ]; then
         echo "$POSITION" >/tmp/last_position

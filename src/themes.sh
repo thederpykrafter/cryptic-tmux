@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-SELECTED_THEME="$(tmux show-option -gv @tokyodark-tmux_theme)"
-TRANSPARENT_THEME="$(tmux show-option -gv @tokyodark-tmux_transparent)"
+SELECTED_THEME="$(tmux show-option -gv @cryptic-tmux_theme)"
+TRANSPARENT_THEME="$(tmux show-option -gv @cryptic-tmux_transparent)"
 
 case $SELECTED_THEME in
   *)
-    # Default to tokyodark theme
+    # Default to cryptic theme
     declare -A THEME=(
       ["background"]="#1A1B26"
       ["foreground"]="#a9b1d6"
@@ -43,7 +43,7 @@ case $SELECTED_THEME in
       ;;
     pywal)
       source ~/.cache/wal/colors.sh
-      # Default to tokyodark theme
+      # Default to cryptic theme
       declare -A THEME=(
         ["background"]=$background
         ["foreground"]=$foreground
